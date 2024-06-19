@@ -7,6 +7,18 @@
 # MyTake
 
 
+### Dionysus 1, 2, 3
+- Challenges. May reduce wait time
+- Skills. Do the authors have a biological hypothesis?
+
+### Sing O Muse! 4
+- Tools. HLA-matching controlled for?
+- Interpersonal. Vigilance & support beyond transplant
+  
+### Apollo 5, 6
+- What sort of inference are the authors seeking to make
+- Any trends: why not show in a graph?
+  
 # GPT-4o 
 
 ### Peer Review for AJU-2024-0257: "The Impact of Donor-Recipient Relationship on Long-Term Outcomes in Living-Related Donor Kidney Transplantation"
