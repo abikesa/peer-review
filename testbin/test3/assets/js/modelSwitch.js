@@ -27,3 +27,4 @@ window.onload = function () {
     updateVariableInputs(); // Update inputs for Model 1
     updateVariableInputs2(); // Update inputs for Model 2
 };# flick 20250414180453-u9rP
+# flick 20250414183701-vfn6
