@@ -414,6 +414,31 @@ document.write(`
 <li><p><a class="reference download internal" download="" href="../../_downloads/0fed81fcd4cee3f2c67562591d3eca06/CLTX-25-LTE-0329_Proof_hi.pdf"><span class="xref download myst">Letter</span></a>, <a class="reference internal" href="../../reviews/CLTX-25-LTE-0329_Proof_hi.html"><span class="std std-doc">review</span></a></p></li>
 <li><p><a class="reference download internal" download="" href="../../_downloads/646206d0815b4855d77d1d77c453cc78/CLTX-25-ORIG-0267_Proof_hi.pdf"><span class="xref download myst">Original</span></a>, <a class="reference internal" href="../../reviews/CLTX-25-ORIG-0267_Proof_hi.html"><span class="std std-doc">review</span></a></p></li>
 </ul>
+<p>The letter makes a strong ethical appeal, but it under-articulates the systemic mechanics and epistemic implications of its proposal. There is a meaningful opportunity here to advance the conversation about what digital integration in patient-centered research should look like—particularly at the intersection of care, consent, and computation.</p>
+<p>That said, after careful review, I must recommend major revisions before a final editorial decision can be made.</p>
+<p>In point seven I recommend a visual representation of their ideas for extra clarify. For instance, here’s a close-enough framework (which I’d developed for my personal work), that I’d be happy to share with them: <a class="github reference external" href="https://github.com/abikesa/framework/blob/main/framework.png">abikesa/framework</a></p>
+<p>Your call!</p>
+<hr class="docutils" />
+<p>This Letter thoughtfully reflects on using Telemonitoring Platforms to Invite Kidney Transplant Recipients to Participate in Research While Ensuring Privacy.</p>
+<p>It addresses a critical intersection in contemporary care: the use of digital platforms to invite participation from kidney transplant recipients in qualitative research, while upholding ethical and privacy standards. The team’s concern for consent, transparency, and patient trust is evident and commendable.</p>
+<p>One may recognize this work as part of a broader movement toward integrating patient perspectives into research pathways using tools historically designed for clinical monitoring.</p>
+<p>Key Areas for Revision</p>
+<ol class="arabic simple">
+<li><p>Infrastructure Specificity and System Interoperability
+While the letter references regulatory protocols and a robust telemonitoring cohort, it lacks operational clarity. How does the platform interact with electronic medical records, research databases, and analytic environments? What role, if any, do third-party actors or modular analytic scripts play? These questions are particularly pressing given your concern about privacy and disclosure risk. A more detailed account of the system architecture would elevate both the transparency and the reproducibility of your approach.</p></li>
+<li><p>Precision in Terminology
+The term “telemonitoring platform” is used throughout, but appears to function as a proxy for multiple overlapping systems: care delivery, communication, and research solicitation. Consider disaggregating these functions, or adopting more precise language (e.g., patient portal, survey bridge, telemedicine interface) to clarify the intended scope and reduce conceptual ambiguity.</p></li>
+<li><p>Information Delivery and Comprehension
+The manuscript emphasizes consent and patient awareness but does not describe the design of informational interfaces. How are questions framed? Are contextual cues offered to distinguish between clinical care and research participation? The rhetorical and visual scaffolding of digital communication is a vital part of informed engagement—currently underexamined here.</p></li>
+<li><p>Agency and Patient Navigation
+The authors’ emphasis on co-construction and frequency modulation is promising, but agency is still treated largely as a reactive capacity. Can patients set preferences? Are they presented with decision paths? Is the platform responsive to patient behavior over time? These dimensions are crucial to evolving beyond a purely extractive model of participation.</p></li>
+<li><p>Pathways from Input to Impact
+The manuscript outlines the process of collecting qualitative input, but the downstream consequences of that input remain vague. Does it inform protocol design? Clinical practice? Institutional feedback? Evidence of integration—or at least intention to integrate—would add substantial depth to the argument.</p></li>
+<li><p>Privacy Beyond Regulation
+The authors  rightly note that ethical oversight and consent are core components of patient protection. However, new research systems often require epistemic guardianship—not just compliance. There is no discussion of mechanisms like trusted data intermediaries, sandboxed environments, or permissioned analytics that could help bridge this gap. The absence of such discussion weakens the manuscript’s central claim about safeguarding privacy while promoting engagement.</p></li>
+<li><p>Visual Representation
+A conceptual figure or diagram would help illustrate the relationships between patients, platforms, consent layers, and data flows. This would not only aid reader comprehension but also reveal where ethical or structural boundaries are being drawn or crossed.</p></li>
+</ol>
 <style>
 .float-right {
     float: right;
@@ -473,68 +498,30 @@ document.write(`
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
 
-<span class="c1"># Define the relabeled network layers with tattoo-world labels</span>
+<span class="c1"># Define the neural network fractal</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">define_layers</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
-        <span class="s1">&#39;Initiation&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;First Ink&#39;</span><span class="p">,</span> <span class="s1">&#39;Street Symbols&#39;</span><span class="p">,</span> <span class="s1">&#39;Gang Affiliation&#39;</span><span class="p">,</span> <span class="s1">&#39;Prison Time&#39;</span><span class="p">,</span> <span class="s2">&quot;Underworld Rank&quot;</span><span class="p">,</span> <span class="s1">&#39;Elite Criminal Status&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;Recognition&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">],</span>  
-        <span class="s1">&#39;Authority&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Hitman Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Kingpin Insignia&#39;</span><span class="p">],</span>  
-        <span class="s1">&#39;Regulation&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Betrayal Marks&#39;</span><span class="p">,</span> <span class="s1">&#39;Excommunication Symbols&#39;</span><span class="p">,</span> <span class="s1">&#39;Loyalty Seals&#39;</span><span class="p">,</span> <span class="p">],</span>  
-        <span class="s2">&quot;Execution&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Death Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Blood Oath&#39;</span><span class="p">,</span> <span class="s1">&#39;Punishment Tally&#39;</span><span class="p">,</span> <span class="s1">&#39;Ritual Branding&#39;</span><span class="p">,</span> <span class="s1">&#39;Legacy Inscriptions&#39;</span><span class="p">]</span>  
+        <span class="s1">&#39;Suis&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Patient Access/Care&#39;</span><span class="p">,</span> <span class="s1">&#39;Hospital Records&#39;</span><span class="p">,</span> <span class="s1">&#39;Disclosure Risk&#39;</span><span class="p">,</span> <span class="s1">&#39;Collaborators&#39;</span><span class="p">,</span> <span class="s1">&#39;Databases&#39;</span><span class="p">,</span> <span class="s1">&#39;Analytic Scripts&#39;</span><span class="p">,</span> <span class="p">],</span> <span class="c1"># Static</span>
+        <span class="s1">&#39;Voir&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Information&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;Choisis&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Baseline&#39;</span><span class="p">,</span> <span class="s1">&#39;Decision&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;Deviens&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Adverse Event Markers&#39;</span><span class="p">,</span> <span class="s1">&#39;Comorbidity/ICD Codes&#39;</span><span class="p">,</span> <span class="s1">&#39;Temporal Changes&#39;</span><span class="p">],</span>  
+        <span class="s2">&quot;M&#39;èléve&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Mortality Rate&#39;</span><span class="p">,</span> <span class="s1">&#39;Organ Failure&#39;</span><span class="p">,</span>  <span class="s1">&#39;Hospitalization&#39;</span><span class="p">,</span> <span class="s1">&#39;Dependency&#39;</span><span class="p">,</span> <span class="s1">&#39;Physical Frailty&#39;</span><span class="p">]</span>  
     <span class="p">}</span>
 
 <span class="c1"># Assign colors to nodes</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">assign_colors</span><span class="p">():</span>
-    <span class="n">color_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;yellow&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">],</span>  
-        <span class="s1">&#39;paleturquoise&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Elite Criminal Status&#39;</span><span class="p">,</span> <span class="s1">&#39;Kingpin Insignia&#39;</span><span class="p">,</span> <span class="s1">&#39;Loyalty Seals&#39;</span><span class="p">,</span> <span class="s1">&#39;Legacy Inscriptions&#39;</span><span class="p">],</span>  
-        <span class="s1">&#39;lightgreen&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Underworld Rank&quot;</span><span class="p">,</span> <span class="s1">&#39;Excommunication Symbols&#39;</span><span class="p">,</span> <span class="s1">&#39;Blood Oath&#39;</span><span class="p">,</span> <span class="s1">&#39;Ritual Branding&#39;</span><span class="p">,</span> <span class="s1">&#39;Punishment Tally&#39;</span><span class="p">],</span>  
-        <span class="s1">&#39;lightsalmon&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Gang Affiliation&#39;</span><span class="p">,</span> <span class="s1">&#39;Prison Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Hitman Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Betrayal Marks&#39;</span><span class="p">,</span> <span class="s1">&#39;Death Mark&#39;</span><span class="p">],</span>
+    <span class="n">color_map</span> <span class="o">=</span> <span class="p">{</span> <span class="c1"># Dynamic</span>
+        <span class="s1">&#39;yellow&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Information&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;paleturquoise&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Analytic Scripts&#39;</span><span class="p">,</span> <span class="s1">&#39;Decision&#39;</span><span class="p">,</span> <span class="s1">&#39;Temporal Changes&#39;</span><span class="p">,</span> <span class="s1">&#39;Physical Frailty&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;lightgreen&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Databases&#39;</span><span class="p">,</span> <span class="s1">&#39;Comorbidity/ICD Codes&#39;</span><span class="p">,</span> <span class="s1">&#39;Organ Failure&#39;</span><span class="p">,</span> <span class="s1">&#39;Dependency&#39;</span><span class="p">,</span> <span class="s1">&#39;Hospitalization&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;lightsalmon&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">&#39;Disclosure Risk&#39;</span><span class="p">,</span> <span class="s1">&#39;Collaborators&#39;</span><span class="p">,</span> <span class="s1">&#39;Baseline&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;Adverse Event Markers&#39;</span><span class="p">,</span> <span class="s1">&#39;Mortality Rate&#39;</span>
+        <span class="p">],</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="n">color</span> <span class="k">for</span> <span class="n">color</span><span class="p">,</span> <span class="n">nodes</span> <span class="ow">in</span> <span class="n">color_map</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">}</span>
 
-<span class="c1"># Define edge weights</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">define_edges</span><span class="p">():</span>
-    <span class="k">return</span> <span class="p">{</span>
-        <span class="p">(</span><span class="s1">&#39;First Ink&#39;</span><span class="p">,</span> <span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">):</span> <span class="s1">&#39;1/99&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Street Symbols&#39;</span><span class="p">,</span> <span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">):</span> <span class="s1">&#39;5/95&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Gang Affiliation&#39;</span><span class="p">,</span> <span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">):</span> <span class="s1">&#39;20/80&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Prison Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">):</span> <span class="s1">&#39;51/49&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s2">&quot;Underworld Rank&quot;</span><span class="p">,</span> <span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">):</span> <span class="s1">&#39;80/20&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Elite Criminal Status&#39;</span><span class="p">,</span> <span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">):</span> <span class="s1">&#39;95/5&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">,</span> <span class="s1">&#39;Hitman Mark&#39;</span><span class="p">):</span> <span class="s1">&#39;20/80&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">,</span> <span class="s1">&#39;Kingpin Insignia&#39;</span><span class="p">):</span> <span class="s1">&#39;80/20&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Hitman Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Betrayal Marks&#39;</span><span class="p">):</span> <span class="s1">&#39;49/51&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Hitman Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Excommunication Symbols&#39;</span><span class="p">):</span> <span class="s1">&#39;80/20&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Hitman Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Loyalty Seals&#39;</span><span class="p">):</span> <span class="s1">&#39;95/5&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Kingpin Insignia&#39;</span><span class="p">,</span> <span class="s1">&#39;Betrayal Marks&#39;</span><span class="p">):</span> <span class="s1">&#39;5/95&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Kingpin Insignia&#39;</span><span class="p">,</span> <span class="s1">&#39;Excommunication Symbols&#39;</span><span class="p">):</span> <span class="s1">&#39;20/80&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Kingpin Insignia&#39;</span><span class="p">,</span> <span class="s1">&#39;Loyalty Seals&#39;</span><span class="p">):</span> <span class="s1">&#39;51/49&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Betrayal Marks&#39;</span><span class="p">,</span> <span class="s1">&#39;Death Mark&#39;</span><span class="p">):</span> <span class="s1">&#39;80/20&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Betrayal Marks&#39;</span><span class="p">,</span> <span class="s1">&#39;Blood Oath&#39;</span><span class="p">):</span> <span class="s1">&#39;85/15&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Betrayal Marks&#39;</span><span class="p">,</span> <span class="s1">&#39;Punishment Tally&#39;</span><span class="p">):</span> <span class="s1">&#39;90/10&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Betrayal Marks&#39;</span><span class="p">,</span> <span class="s1">&#39;Ritual Branding&#39;</span><span class="p">):</span> <span class="s1">&#39;95/5&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Betrayal Marks&#39;</span><span class="p">,</span> <span class="s1">&#39;Legacy Inscriptions&#39;</span><span class="p">):</span> <span class="s1">&#39;99/1&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Excommunication Symbols&#39;</span><span class="p">,</span> <span class="s1">&#39;Death Mark&#39;</span><span class="p">):</span> <span class="s1">&#39;1/9&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Excommunication Symbols&#39;</span><span class="p">,</span> <span class="s1">&#39;Blood Oath&#39;</span><span class="p">):</span> <span class="s1">&#39;1/8&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Excommunication Symbols&#39;</span><span class="p">,</span> <span class="s1">&#39;Punishment Tally&#39;</span><span class="p">):</span> <span class="s1">&#39;1/7&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Excommunication Symbols&#39;</span><span class="p">,</span> <span class="s1">&#39;Ritual Branding&#39;</span><span class="p">):</span> <span class="s1">&#39;1/6&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Excommunication Symbols&#39;</span><span class="p">,</span> <span class="s1">&#39;Legacy Inscriptions&#39;</span><span class="p">):</span> <span class="s1">&#39;1/5&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Loyalty Seals&#39;</span><span class="p">,</span> <span class="s1">&#39;Death Mark&#39;</span><span class="p">):</span> <span class="s1">&#39;1/99&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Loyalty Seals&#39;</span><span class="p">,</span> <span class="s1">&#39;Blood Oath&#39;</span><span class="p">):</span> <span class="s1">&#39;5/95&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Loyalty Seals&#39;</span><span class="p">,</span> <span class="s1">&#39;Punishment Tally&#39;</span><span class="p">):</span> <span class="s1">&#39;10/90&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Loyalty Seals&#39;</span><span class="p">,</span> <span class="s1">&#39;Ritual Branding&#39;</span><span class="p">):</span> <span class="s1">&#39;15/85&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Loyalty Seals&#39;</span><span class="p">,</span> <span class="s1">&#39;Legacy Inscriptions&#39;</span><span class="p">):</span> <span class="s1">&#39;20/80&#39;</span>
-    <span class="p">}</span>
-
-<span class="c1"># Define edges to be highlighted in black</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">define_black_edges</span><span class="p">():</span>
-    <span class="k">return</span> <span class="p">{</span>
-        <span class="p">(</span><span class="s1">&#39;First Ink&#39;</span><span class="p">,</span> <span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">):</span> <span class="s1">&#39;1/99&#39;</span><span class="p">,</span>
-        <span class="p">(</span><span class="s1">&#39;Street Symbols&#39;</span><span class="p">,</span> <span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">):</span> <span class="s1">&#39;5/95&#39;</span><span class="p">,</span>
-    <span class="p">}</span>
-
-<span class="c1"># Calculate node positions</span>
+<span class="c1"># Calculate positions for nodes</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">x_offset</span><span class="p">):</span>
     <span class="n">y_positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">))</span>
     <span class="k">return</span> <span class="p">[(</span><span class="n">x_offset</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_positions</span><span class="p">]</span>
@@ -543,50 +530,36 @@ document.write(`
 <span class="k">def</span><span class="w"> </span><span class="nf">visualize_nn</span><span class="p">():</span>
     <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
     <span class="n">colors</span> <span class="o">=</span> <span class="n">assign_colors</span><span class="p">()</span>
-    <span class="n">edges</span> <span class="o">=</span> <span class="n">define_edges</span><span class="p">()</span>
-    <span class="n">black_edges</span> <span class="o">=</span> <span class="n">define_black_edges</span><span class="p">()</span>
-    
     <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
     <span class="n">pos</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">node_colors</span> <span class="o">=</span> <span class="p">[]</span>
-    
-    <span class="c1"># Create mapping from original node names to numbered labels</span>
-    <span class="n">mapping</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">layers</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
-        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">layer</span><span class="p">:</span>
-            <span class="n">mapping</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">counter</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">&quot;</span>
-            <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
-            
-    <span class="c1"># Add nodes with new numbered labels and assign positions</span>
+
+    <span class="c1"># Add nodes and assign positions</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">layer_name</span><span class="p">,</span> <span class="n">nodes</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
         <span class="n">positions</span> <span class="o">=</span> <span class="n">calculate_positions</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">x_offset</span><span class="o">=</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">positions</span><span class="p">):</span>
-            <span class="n">new_node</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
-            <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">new_node</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="n">layer_name</span><span class="p">)</span>
-            <span class="n">pos</span><span class="p">[</span><span class="n">new_node</span><span class="p">]</span> <span class="o">=</span> <span class="n">position</span>
-            <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;lightgray&#39;</span><span class="p">))</span>
-    
-    <span class="c1"># Add edges with updated node labels</span>
-    <span class="n">edge_colors</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">),</span> <span class="n">weight</span> <span class="ow">in</span> <span class="n">edges</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">mapping</span> <span class="ow">and</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">mapping</span><span class="p">:</span>
-            <span class="n">new_source</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">source</span><span class="p">]</span>
-            <span class="n">new_target</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">target</span><span class="p">]</span>
-            <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">new_source</span><span class="p">,</span> <span class="n">new_target</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="n">weight</span><span class="p">)</span>
-            <span class="n">edge_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;black&#39;</span> <span class="k">if</span> <span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span> <span class="ow">in</span> <span class="n">black_edges</span> <span class="k">else</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">)</span>
-    
+            <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="n">layer_name</span><span class="p">)</span>
+            <span class="n">pos</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">position</span>
+            <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;lightgray&#39;</span><span class="p">))</span>   
+
+    <span class="c1"># Add edges (automated for consecutive layers)</span>
+    <span class="n">layer_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">layer_names</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">source_layer</span><span class="p">,</span> <span class="n">target_layer</span> <span class="o">=</span> <span class="n">layer_names</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">layer_names</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">source_layer</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">target_layer</span><span class="p">]:</span>
+                <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+
     <span class="c1"># Draw the graph</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-    <span class="n">edges_labels</span> <span class="o">=</span> <span class="p">{(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="kc">True</span><span class="p">)}</span>
-    
     <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
-        <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="n">edge_colors</span><span class="p">,</span>
-        <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.2&quot;</span>
+        <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
+        <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.2&quot;</span>
     <span class="p">)</span>
-    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_labels</span><span class="o">=</span><span class="n">edges_labels</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;OPRAH™: Criminal Ink Network: Ukubona Ubuntu&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Réseau Neuronal Cognitif — Ukubona&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">23</span><span class="p">)</span>    
+    <span class="c1"># ✅ Save the actual image *after* drawing it</span>
+    <span class="c1"># plt.savefig(&quot;../figures/ukubona.jpeg&quot;, dpi=300, bbox_inches=&#39;tight&#39;)</span>
+    <span class="c1"># plt.show()</span>
 
 <span class="c1"># Run the visualization</span>
 <span class="n">visualize_nn</span><span class="p">()</span>
@@ -595,13 +568,13 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/77e6318e987433d9deb1115ad12e8074201568292af097f3376fe297798afc46.png" src="../../_images/77e6318e987433d9deb1115ad12e8074201568292af097f3376fe297798afc46.png" />
+<img alt="../../_images/11ce368b991e1f6db41fc41dcd5fef1cb68447143b3dcb1ac6c46605bd396ad8.png" src="../../_images/11ce368b991e1f6db41fc41dcd5fef1cb68447143b3dcb1ac6c46605bd396ad8.png" />
 </div>
 </div>
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="figures/blanche.*"><img alt="figures/blanche.*" src="figures/blanche.*" style="width: 1px; height: 1px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Icarus represents a rapid, elegant escape from the labyrinth by transcending into the third dimension—a brilliant shortcut past the father’s meticulous, earthbound craftsmanship. Daedalus, the master architect, constructs a tortuous, enclosed structure that forces problem-solving along a constrained plane. Icarus, impatient, bypasses the entire system, opting for flight: the most immediate and efficient exit. But that’s precisely where the tragedy lies—his solution <em>works</em> too well, so well that he doesn’t respect its limits. The sun, often emphasized as the moralistic warning, is really just a reminder that even the most beautiful, radical solutions have constraints. Icarus doesn’t just escape; he ascends. But in doing so, he loses the ability to iterate, to adjust dynamically. His shortcut is both his liberation and his doom. The real irony? Daedalus, bound to linear problem-solving, actually survives. He flies, but conservatively. Icarus, in contrast, embodies the hubris of absolute success—skipping all iterative safeguards, assuming pure ascent is sustainable.  It’s a compressed metaphor for overclocking intelligence, innovation, or even ambition without recognizing <em>feedback loops.</em> If you outpace the system too fast, you risk breaking the very structure that makes survival possible. It’s less about the sun and more about respecting the transition phase between escape and mastery.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">What are the downstream effects of this proposal?</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
