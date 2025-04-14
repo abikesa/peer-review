@@ -224,6 +224,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Illusion, 🎻🛏️💃🫒🍱</a></li>
+
 </ul>
 
     </div>
@@ -467,12 +468,12 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
 
 <span class="c1"># Define the neural network layers</span>
-<span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">define_layers</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
         <span class="s1">&#39;Tragedy (Pattern Recognition)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cosmology&#39;</span><span class="p">,</span> <span class="s1">&#39;Geology&#39;</span><span class="p">,</span> <span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Ecology&#39;</span><span class="p">,</span> <span class="s2">&quot;Symbiotology&quot;</span><span class="p">,</span> <span class="s1">&#39;Teleology&#39;</span><span class="p">],</span>
         <span class="s1">&#39;History (Resources)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Resources&#39;</span><span class="p">],</span>  
@@ -482,7 +483,7 @@ document.write(`
     <span class="p">}</span>
 
 <span class="c1"># Assign colors to nodes</span>
-<span class="k">def</span> <span class="nf">assign_colors</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">assign_colors</span><span class="p">():</span>
     <span class="n">color_map</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;yellow&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Resources&#39;</span><span class="p">],</span>  
         <span class="s1">&#39;paleturquoise&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Teleology&#39;</span><span class="p">,</span> <span class="s1">&#39;Islamic Finance&#39;</span><span class="p">,</span> <span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">],</span>  
@@ -492,7 +493,7 @@ document.write(`
     <span class="k">return</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="n">color</span> <span class="k">for</span> <span class="n">color</span><span class="p">,</span> <span class="n">nodes</span> <span class="ow">in</span> <span class="n">color_map</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">}</span>
 
 <span class="c1"># Define edges</span>
-<span class="k">def</span> <span class="nf">define_edges</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">define_edges</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">[</span>
         <span class="p">(</span><span class="s1">&#39;Cosmology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
         <span class="p">(</span><span class="s1">&#39;Geology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
@@ -531,12 +532,12 @@ document.write(`
 <span class="p">]</span>
 
 <span class="c1"># Calculate node positions</span>
-<span class="k">def</span> <span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">x_offset</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">x_offset</span><span class="p">):</span>
     <span class="n">y_positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">))</span>
     <span class="k">return</span> <span class="p">[(</span><span class="n">x_offset</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_positions</span><span class="p">]</span>
 
 <span class="c1"># Create and visualize the neural network graph with correctly assigned black edges</span>
-<span class="k">def</span> <span class="nf">visualize_nn</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">visualize_nn</span><span class="p">():</span>
     <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
     <span class="n">colors</span> <span class="o">=</span> <span class="n">assign_colors</span><span class="p">()</span>
     <span class="n">edges</span> <span class="o">=</span> <span class="n">define_edges</span><span class="p">()</span>
@@ -622,9 +623,9 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygame</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pygame</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 
 <span class="c1"># Initialize Pygame</span>
 <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
@@ -656,15 +657,15 @@ document.write(`
 <span class="n">clock</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">Clock</span><span class="p">()</span>
 
 <span class="c1"># Paddle class</span>
-<span class="k">class</span> <span class="nc">Paddle</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Paddle</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">PADDLE_WIDTH</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">PADDLE_HEIGHT</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">PADDLE_SPEED</span>
 
-    <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">up</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">up</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">up</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">speed</span>
         <span class="k">else</span><span class="p">:</span>
@@ -672,32 +673,32 @@ document.write(`
         <span class="c1"># Keep paddle within screen bounds</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">SCREEN_HEIGHT</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
 
-    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
 
 <span class="c1"># Ball class</span>
-<span class="k">class</span> <span class="nc">Ball</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Ball</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">BALL_SIZE</span>
 
-    <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vel_x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vel_y</span>
 
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">SCREEN_WIDTH</span> <span class="o">//</span> <span class="mi">2</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">SCREEN_HEIGHT</span> <span class="o">//</span> <span class="mi">2</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vel_x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="n">BALL_SPEED</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vel_y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="n">BALL_SPEED</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_hit</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># Tracks which paddle last hit the ball</span>
 
-    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">)),</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
 
 <span class="c1"># Brick class</span>
-<span class="k">class</span> <span class="nc">Brick</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Brick</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">BRICK_WIDTH</span>
@@ -705,13 +706,13 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="n">RED</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">intact</span> <span class="o">=</span> <span class="kc">True</span>
 
-    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">intact</span><span class="p">:</span>
             <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">color</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
 
 <span class="c1"># Particle class for visual effects</span>
-<span class="k">class</span> <span class="nc">Particle</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Particle</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
@@ -720,12 +721,12 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">life</span> <span class="o">=</span> <span class="mi">30</span>  <span class="c1"># Frames until particle disappears</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="n">RED</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">])</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vel_x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vel_y</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">life</span> <span class="o">-=</span> <span class="mi">1</span>
 
-    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">life</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">alpha</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">life</span> <span class="o">/</span> <span class="mi">30</span><span class="p">)</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span>  <span class="c1"># Fade out effect</span>
             <span class="n">surface</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Surface</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">),</span> <span class="n">pygame</span><span class="o">.</span><span class="n">SRCALPHA</span><span class="p">)</span>
@@ -733,13 +734,13 @@ document.write(`
             <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">)))</span>
 
 <span class="c1"># Collision detection functions</span>
-<span class="k">def</span> <span class="nf">ball_collides_with_paddle</span><span class="p">(</span><span class="n">ball</span><span class="p">,</span> <span class="n">paddle</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ball_collides_with_paddle</span><span class="p">(</span><span class="n">ball</span><span class="p">,</span> <span class="n">paddle</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">ball</span><span class="o">.</span><span class="n">size</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="n">paddle</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">paddle</span><span class="o">.</span><span class="n">width</span> <span class="ow">and</span>
             <span class="n">ball</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">ball</span><span class="o">.</span><span class="n">size</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="n">paddle</span><span class="o">.</span><span class="n">x</span> <span class="ow">and</span>
             <span class="n">ball</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">ball</span><span class="o">.</span><span class="n">size</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="n">paddle</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">paddle</span><span class="o">.</span><span class="n">height</span> <span class="ow">and</span>
             <span class="n">ball</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">ball</span><span class="o">.</span><span class="n">size</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="n">paddle</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">ball_collides_with_brick</span><span class="p">(</span><span class="n">ball</span><span class="p">,</span> <span class="n">brick</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ball_collides_with_brick</span><span class="p">(</span><span class="n">ball</span><span class="p">,</span> <span class="n">brick</span><span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">brick</span><span class="o">.</span><span class="n">intact</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">ball</span><span class="o">.</span><span class="n">size</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="n">brick</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">brick</span><span class="o">.</span><span class="n">width</span> <span class="ow">and</span>

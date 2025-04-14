@@ -55,4 +55,4 @@ The study aims to enhance risk stratification, but its ultimate clinical goal is
 ### **Conclusion:**  
 This study presents valuable data on the association between AAC and post-transplant survival but requires major revisions to clarify its biological relevance, generalizability, and predictive utility. Strengthening the discussion on how AAC integrates into existing risk models and optimizing its application in clinical decision-making will improve its impact.  
 
-**Recommendation: Major Revisions Required.** why not 
+**Recommendation: Major Revisions Required.** why not # flick 20250414180445-pjQG
