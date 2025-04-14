@@ -121,3 +121,4 @@ static const int default_palette_size =
     (int)(sizeof(default_palette_colors) / sizeof(SDL_Color));
 
 #endif
+# flick 20250414205052-9DVN
