@@ -270,4 +270,4 @@ async function calculateRisk() {
     Plotly.newPlot('hospitalization-risk-graph', data, layout).catch(error => {
         console.error('Plotly Error:', error);
     });
-}
+}# flick 20250414181745-SiKs
