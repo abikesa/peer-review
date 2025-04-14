@@ -224,6 +224,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Illusion, 🎻🛏️💃🫒🍱</a></li>
+
 </ul>
 
     </div>
@@ -407,6 +408,11 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="stable">
 <span id="id1"></span><h1>Stable<a class="headerlink" href="#stable" title="Permalink to this heading">#</a></h1>
+<p>Review today</p>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../_downloads/0fed81fcd4cee3f2c67562591d3eca06/CLTX-25-LTE-0329_Proof_hi.pdf"><span class="xref download myst">Original</span></a>, <a class="reference internal" href="../../reviews/CLTX-25-LTE-0329_Proof_hi.html"><span class="std std-doc">review</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/646206d0815b4855d77d1d77c453cc78/CLTX-25-ORIG-0267_Proof_hi.pdf"><span class="xref download myst">Letter</span></a>, <a class="reference internal" href="../../reviews/CLTX-25-ORIG-0267_Proof_hi.html"><span class="std std-doc">review</span></a></p></li>
+</ul>
 <style>
 .float-right {
     float: right;
@@ -462,12 +468,12 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
 
 <span class="c1"># Define the relabeled network layers with tattoo-world labels</span>
-<span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">define_layers</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
         <span class="s1">&#39;Initiation&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;First Ink&#39;</span><span class="p">,</span> <span class="s1">&#39;Street Symbols&#39;</span><span class="p">,</span> <span class="s1">&#39;Gang Affiliation&#39;</span><span class="p">,</span> <span class="s1">&#39;Prison Time&#39;</span><span class="p">,</span> <span class="s2">&quot;Underworld Rank&quot;</span><span class="p">,</span> <span class="s1">&#39;Elite Criminal Status&#39;</span><span class="p">],</span>
         <span class="s1">&#39;Recognition&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">],</span>  
@@ -477,7 +483,7 @@ document.write(`
     <span class="p">}</span>
 
 <span class="c1"># Assign colors to nodes</span>
-<span class="k">def</span> <span class="nf">assign_colors</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">assign_colors</span><span class="p">():</span>
     <span class="n">color_map</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;yellow&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">],</span>  
         <span class="s1">&#39;paleturquoise&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Elite Criminal Status&#39;</span><span class="p">,</span> <span class="s1">&#39;Kingpin Insignia&#39;</span><span class="p">,</span> <span class="s1">&#39;Loyalty Seals&#39;</span><span class="p">,</span> <span class="s1">&#39;Legacy Inscriptions&#39;</span><span class="p">],</span>  
@@ -487,7 +493,7 @@ document.write(`
     <span class="k">return</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="n">color</span> <span class="k">for</span> <span class="n">color</span><span class="p">,</span> <span class="n">nodes</span> <span class="ow">in</span> <span class="n">color_map</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">}</span>
 
 <span class="c1"># Define edge weights</span>
-<span class="k">def</span> <span class="nf">define_edges</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">define_edges</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
         <span class="p">(</span><span class="s1">&#39;First Ink&#39;</span><span class="p">,</span> <span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">):</span> <span class="s1">&#39;1/99&#39;</span><span class="p">,</span>
         <span class="p">(</span><span class="s1">&#39;Street Symbols&#39;</span><span class="p">,</span> <span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">):</span> <span class="s1">&#39;5/95&#39;</span><span class="p">,</span>
@@ -521,19 +527,19 @@ document.write(`
     <span class="p">}</span>
 
 <span class="c1"># Define edges to be highlighted in black</span>
-<span class="k">def</span> <span class="nf">define_black_edges</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">define_black_edges</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
         <span class="p">(</span><span class="s1">&#39;First Ink&#39;</span><span class="p">,</span> <span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">):</span> <span class="s1">&#39;1/99&#39;</span><span class="p">,</span>
         <span class="p">(</span><span class="s1">&#39;Street Symbols&#39;</span><span class="p">,</span> <span class="s1">&#39;Tattoo Codekeepers&#39;</span><span class="p">):</span> <span class="s1">&#39;5/95&#39;</span><span class="p">,</span>
     <span class="p">}</span>
 
 <span class="c1"># Calculate node positions</span>
-<span class="k">def</span> <span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">x_offset</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">x_offset</span><span class="p">):</span>
     <span class="n">y_positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">))</span>
     <span class="k">return</span> <span class="p">[(</span><span class="n">x_offset</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_positions</span><span class="p">]</span>
 
 <span class="c1"># Create and visualize the neural network graph</span>
-<span class="k">def</span> <span class="nf">visualize_nn</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">visualize_nn</span><span class="p">():</span>
     <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
     <span class="n">colors</span> <span class="o">=</span> <span class="n">assign_colors</span><span class="p">()</span>
     <span class="n">edges</span> <span class="o">=</span> <span class="n">define_edges</span><span class="p">()</span>
