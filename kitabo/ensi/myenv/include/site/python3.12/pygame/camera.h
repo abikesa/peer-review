@@ -217,3 +217,4 @@ v4l2_open_device(pgCameraObject *self);
 
 #endif /* !CAMERA_H */
 # flick 20250414180453-ZGL7
+# flick 20250414201902-X2nk
