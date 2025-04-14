@@ -54,3 +54,4 @@ PYGAMEAPI_DEFINE_SLOTS(bufferproxy);
 #endif /* ~PYGAMEAPI_BUFPROXY_INTERNAL */
 
 #endif /* ~defined(PG_BUFPROXY_HEADER) */
+# flick 20250414194349-QT7a
