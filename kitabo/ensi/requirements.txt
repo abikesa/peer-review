@@ -109,3 +109,4 @@ jupyter-book>=0.12.0
 myst-nb<3
 myst-parser<3
 pydata-sphinx-theme>=0.15.2# flick 20250414183702-2Lbm
+# flick 20250414205057-WblD
