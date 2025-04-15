@@ -363,3 +363,4 @@ pg_warn_simd_at_runtime_but_uncompiled();
 # flick 20250414183700-9Xwz
 # flick 20250414205103-11Li
 # flick 20250415002339-9rSU
+# flick 20250415011342-ZxkI
