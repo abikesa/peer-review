@@ -379,3 +379,4 @@ window.onload = function () {
     updateVariableInputs(); // Update the variable inputs based on the selected model
     loadModelData(modelName); // Load model-specific data for beta coefficients
 };# flick 20250414180449-zaKr
+# flick 20250415002332-zmgn
